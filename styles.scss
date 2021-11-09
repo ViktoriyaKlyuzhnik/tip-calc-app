@@ -1,0 +1,199 @@
+$StrongCyan: hsl(172, 67%, 45%);
+$StrongCyan2: hsl(172, 70%, 53%);
+$VeryDarkCyan: hsl(183, 100%, 15%);
+$DarkGrayishCyan: hsl(186, 14%, 43%);
+$DarkGrayishCyan2: hsl(184, 14%, 56%);
+$LightGrayishCyan: hsl(185, 41%, 84%);
+$LightGrayishCyan2: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+html {
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: $LightGrayishCyan;
+}
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 150px 0;
+}
+.logo {
+    text-align: center;
+    padding-bottom: 80px;
+}
+.card__lable {
+    margin: 0;
+    font-size: 16px;
+    color: $DarkGrayishCyan;
+    padding-bottom: 10px;
+}
+
+.card__input {
+    position: relative;
+    input {
+        margin: 0;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        background-color: $LightGrayishCyan2;
+        color: $VeryDarkCyan;font-family: 'Space Mono', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: right;
+        padding: 5px 15px;
+    }
+    input:active, :focus {
+        outline: none;
+        outline-offset: 0;
+        border: 0;
+        outline: 2px solid $StrongCyan;
+    }
+    span {
+        position: absolute;
+        display: block;
+        transform: translate(0, -50%);
+        top: 50%;
+        width: 25px;
+        padding-left: 15px;
+        text-align: center;
+        color: $DarkGrayishCyan2;
+        font-size: 24px;
+    }
+}
+.card {
+    max-width: 860px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    border-radius: 20px;
+    .card__input-data {
+        padding: 15px;
+        .card__bill {
+            padding-bottom: 42px;
+        }
+        .card__select-tip {
+            padding-bottom: 45px;
+            h4 {
+                padding-bottom: 20px;
+            }
+            .card__tips {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                .card__tip {
+                    background-color: $VeryDarkCyan;
+                    color: $White;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-weight: 700;
+                    padding: 4px;
+                }
+                .card__tip:active, :focus, :hover {
+                    background-color: $StrongCyan2;
+                    color: $VeryDarkCyan;
+                    cursor: pointer;
+                }
+                .card__tip-custom {
+                    input {
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 0;
+                        border-radius: 5px;
+                        background-color: $LightGrayishCyan2;
+                        color: $VeryDarkCyan;
+                        font-family: 'Space Mono', sans-serif;
+                        font-size: 24px;
+                        font-weight: 700;
+                        text-align: right;
+                        padding: 5px 15px;
+                    }
+                    input:active, :focus, :hover {
+                        outline: none;
+                        outline-offset: 0;
+                        border: 0;
+                        outline: 2px solid $StrongCyan;
+                        cursor: text;
+                    }
+                    input::-webkit-input-placeholder {
+                        font-size: 20px;
+                    }
+                    input::-moz-placeholder {
+                        font-size: 20px;
+                    }
+                    input:-moz-placeholder {
+                        font-size: 20px;
+                    }
+                    input:-ms-input-placeholder {
+                        font-size: 20px;
+                    }
+                    input:focus::-webkit-input-placeholder {
+                        color: transparent
+                    }
+                    input:focus::-moz-placeholder {
+                        color: transparent
+                    }
+                    input:focus:-moz-placeholder {
+                        color: transparent
+                    }
+                    input:focus:-ms-input-placeholder {
+                        color: transparent
+                    }
+                }
+            }
+        }
+    }
+    .card__output-data {
+        background-color: $VeryDarkCyan;
+        padding: 60px 35px 40px 35px;
+        border-radius: 10px;
+        h4 {
+            color: $White;
+            padding: 0;
+        }
+        p {
+            margin: 0;
+            color: $LightGrayishCyan;
+            font-size: 14px;
+        }
+        .amount, .total {
+            display: flex;
+            padding-bottom: 55px;
+            position: relative;
+            .value {
+                position: absolute;
+                right: 0;
+                color: $StrongCyan;
+                font-size: 40px;
+                font-weight: 700;
+            }
+        }
+        .btn-reset {
+            background-color: $StrongCyan;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 125px;
+            width: 100%;
+            font-family: 'Space Mono', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: $VeryDarkCyan;
+            text-transform: uppercase;
+            padding: 10px 0;
+        }
+        .btn-reset:hover, :focus, :active {
+            background-color: $StrongCyan2;
+            cursor: pointer;
+        }
+    }
+}
